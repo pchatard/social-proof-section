@@ -16,6 +16,17 @@ body {
 	font-size: 1.5rem;
 	font-family: "Spartan", sans-serif;
 	box-sizing: inherit;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	background-image: url("../images/bg-pattern-top-desktop.svg"),
+		url("../images/bg-pattern-bottom-desktop.svg");
+	background-repeat: no-repeat;
+	background-origin: padding-box;
+	background-position-x: 0%, 100%;
+	background-position-y: 0%, 100%;
+	background-size: 35%, 75%;
 }
 
 *,
@@ -27,17 +38,9 @@ body {
 }
 
 main {
-	height: 100vh;
-	max-width: 1600px;
-	padding: 6rem 12rem;
+	max-width: 1400px;
+	padding: 6rem 6rem;
 	margin: 0 auto;
-	background-image: url("../images/bg-pattern-top-desktop.svg"),
-		url("../images/bg-pattern-bottom-desktop.svg");
-	background-repeat: no-repeat;
-	background-origin: padding-box;
-	background-position-x: 0%, 100%;
-	background-position-y: 0%, 100%;
-	background-size: 35%, 75%;
 }
 
 #headers {
@@ -47,7 +50,7 @@ main {
 
 h1 {
 	color: var(--very-dark-magenta);
-	font-size: 4.1rem;
+	font-size: 4.5rem;
 	line-height: 4rem;
 	letter-spacing: -0.09rem;
 	font-weight: 700;
@@ -69,20 +72,21 @@ h1 {
 
 .rating {
 	width: 85%;
+	min-width: 40rem;
 	background: var(--light-grayish-magenta);
 	border-radius: 5px;
-	padding: 1.4rem 0;
+	padding: 1.4rem 1rem;
 	margin: 1.4rem 0;
 	display: flex;
 	justify-content: flex-start;
 }
 
 .rating:nth-of-type(2) {
-	margin-left: 3rem;
+	margin-left: 3%;
 }
 
 .rating:nth-of-type(3) {
-	margin-left: 6rem;
+	margin-left: 6%;
 }
 
 .rating__stars {
@@ -167,7 +171,6 @@ h1 {
 .attribution {
 	position: fixed;
 	width: 100%;
-	text-align: center;
 	bottom: 0;
 	font-size: 11px;
 	text-align: center;
@@ -182,13 +185,18 @@ h1 {
 		font-size: 50%;
 	}
 
+	body {
+		height: auto;
+		flex-direction: column;
+		background-image: url("../images/bg-pattern-top-mobile.svg"),
+			url("../images/bg-pattern-bottom-mobile.svg");
+		background-size: 100%, 100%;
+	}
+
 	main {
 		height: auto;
 		padding: 6rem 1.5rem;
 		padding-bottom: 0;
-		background-image: url("../images/bg-pattern-top-mobile.svg"),
-			url("../images/bg-pattern-bottom-mobile.svg");
-		background-size: 100%, 100%;
 	}
 
 	#headers {
